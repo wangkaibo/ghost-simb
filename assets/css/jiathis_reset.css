@@ -1,0 +1,23 @@
+#jiathis_weixin_modal {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    font: 14px/1.5 'Microsoft YaHei',arial,tahoma,\5b8b\4f53,sans-serif;
+}
+#jiathis_weixin_tip
+{
+    padding-top: 11px;
+}
+#jiathis_weixin_h3 {
+
+}
+.post-footer .share {
+    width: 260px;
+}
+
+@media only screen and (max-width: 500px) {
+    .post-footer .share {
+        position: static;
+        width: auto;
+    }
+}
