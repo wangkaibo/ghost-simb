@@ -16,7 +16,7 @@
   var contentCacheName = 'content' + cacheVersion;
   var maxEntries = 50;
 
-  self.importScripts('http://7xu5j5.com1.z0.glb.clouddn.com/sw-toolbox.js');
+  self.importScripts('/dist/sw-toolbox.js');
 
   self.toolbox.options.debug = true;
 
