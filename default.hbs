@@ -51,6 +51,34 @@
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     {{!-- The JiaThis JavaScript file --}}
-    <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js" charset="utf-8"></script>
+
+    <script>
+      var serviceWorkerUri = '/serviceworker-v1.js';
+
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register(serviceWorkerUri).then(function() {
+
+          // Registration was successful. Now, check to see whether the service worker is controlling the page.
+           if (navigator.serviceWorker.controller) {
+             console.log('Assets cached by the controlling service worker.');
+
+           } else {
+             console.log('Please reload this page to allow the service worker to handle network operations.');
+
+            }
+          }).catch(function(error) {
+
+            console.log('ERROR: ' + error);
+
+          });
+
+        } else {
+
+          // The current browser doesn't support service workers.
+          console.log('Service workers are not supported in the current browser.');
+
+        }
+    </script>
 </body>
 </html>
