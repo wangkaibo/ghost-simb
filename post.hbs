@@ -7,6 +7,7 @@
 {{#post}}
 {{!-- JiaThis reset Styles --}}
 <link rel="stylesheet" type="text/css" href="{{asset "css/jiathis_reset.css"}}" />
+{{!-- highlight.js Styles --}}
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
@@ -56,7 +57,7 @@
             </section>
 
         {{/author}}
-
+            {{!-- JiaThis Share --}}
             <section class="share">
                 <h4>Share this post</h4>
                 {{!-- JiaThis Button BEGIN --}}
@@ -81,6 +82,7 @@
             {{/if}}
 
         </footer>
+        {{!-- 网易云跟帖 start --}}
         <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
         <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
         <script>
@@ -93,6 +95,7 @@
             var yunManualLoad = true;
             Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
         </script>
+        {{!-- 网易云跟帖 end --}}
     </article>
 </main>
 
